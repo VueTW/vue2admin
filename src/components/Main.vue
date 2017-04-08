@@ -95,8 +95,7 @@
                         </h3>
                         <div class="progress xs">
                           <!-- Change the css width attribute to simulate progress -->
-                          <div class="progress-bar progress-bar-aqua" v-bind:style="'width: ' + t.progress + '%'" role="progressbar" aria-valuenow="20"
-                            aria-valuemin="0" aria-valuemax="100">
+                          <div class="progress-bar progress-bar-aqua" v-bind:style="'width: ' + t.progress + '%'" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
                             <span class="sr-only">{{t.progress}}% Complete</span>
                           </div>
                         </div>
@@ -144,12 +143,11 @@
         <!-- search form (Optional) -->
         <form v-on:submit.prevent class="sidebar-form">
           <div class="input-group">
-            <input type="text" name="search" id="search" class="search form-control" data-toggle="hideseek" placeholder="Search Menus"
-              data-list=".sidebar-menu">
+            <input type="text" name="search" id="search" class="search form-control" data-toggle="hideseek" placeholder="Search Menus" data-list=".sidebar-menu">
             <span class="input-group-btn">
-                  <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                  </button>
-            </span>
+                        <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                        </button>
+                  </span>
           </div>
         </form>
         <!-- /.search form -->
@@ -183,118 +181,41 @@
             <sidebar-menu-item name="Simple Tables" link="tables"></sidebar-menu-item>
             <sidebar-menu-item name="Data Tables" link="datatables"></sidebar-menu-item>
           </sidebar-menu>
-          <!--
-          <li class="pageLink" v-on:click="toggleMenu">
-            <router-link to="/calendar"><i class="fa fa-calendar"></i>            
-            <span class="page">Calendar</span>
-              <span class="pull-right-container">
-            <small class="label pull-right bg-blue">17</small>&nbsp;&nbsp;
-            <small class="label pull-right bg-red">3</small>
-            </span></router-link>
-          </li>-->
-          <sidebar-menu-item name="Calendar" link="calendar" menu-icon="fa-calendar"
-            :labels="[{'col':'bg-purple', 'txt':'11'}, {'col':'bg-yellow', 'txt':'6'}, {'col':'bg-blue', 'txt':'10'}]">
+  
+          <sidebar-menu-item name="Calendar" link="calendar" menu-icon="fa-calendar" :labels="[{'col':'bg-purple', 'txt':'11'}, {'col':'bg-yellow', 'txt':'6'}, {'col':'bg-blue', 'txt':'10'}]">
           </sidebar-menu-item>
-          
-          <!--
-          <li class="treeview">
-            <a href="#"><i class="fa fa-envelope"></i>
-            <span class="page">MailBox</span>
-              <span class="pull-right-container">
-              <small class="label pull-right bg-blue">17</small>&nbsp;&nbsp;
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-yellow">23</small>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <router-link to="/inbox"><i class="fa fa-circle-o"></i>Inbox</router-link>
-              </li>
-              <li>
-                <router-link to="/compose"><i class="fa fa-circle-o"></i> Compose</router-link>
-              </li>
-              <li>
-                <router-link to="/readmail"><i class="fa fa-circle-o"></i>Read</router-link>
-              </li>
-            </ul>
-          </li>          
-          -->
-           <sidebar-menu name="MailBox" menu-icon="fa-envelope"
-            :labels="[{'col':'bg-blue', 'txt':'11'}, {'col':'bg-red', 'txt':'9'}, {'col':'bg-yellow', 'txt':'17'}]">
+          <sidebar-menu name="MailBox" menu-icon="fa-envelope" :labels="[{'col':'bg-blue', 'txt':'11'}, {'col':'bg-red', 'txt':'9'}, {'col':'bg-yellow', 'txt':'17'}]">
             <sidebar-menu-item name="Inbox" link="inbox"></sidebar-menu-item>
             <sidebar-menu-item name="Compose" link="compose" menu-icon="fa-edit"></sidebar-menu-item>
             <sidebar-menu-item name="Read" link="readmail"></sidebar-menu-item>
           </sidebar-menu>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-folder"></i>
-              <span class="page">Pages</span>
-              <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-            </a>
-            <ul class="treeview-menu">
-              <li>
-                <router-link to="/404"><i class="fa fa-circle-o"></i>404</router-link>
-              </li>
-              <li>
-                <router-link to="/500"><i class="fa fa-circle-o"></i> 500</router-link>
-              </li>
-              <li>
-                <router-link to="/profile"><i class="fa fa-circle-o"></i>Profile</router-link>
-              </li>
-              <li>
-                <router-link to="/invoice"><i class="fa fa-circle-o"></i>Invoice</router-link>
-              </li>
-              <li>
-                <router-link to="/invoiceprint"><i class="fa fa-circle-o"></i>Invoice Print</router-link>
-              </li>
-              <li>
-                <router-link to="/register"><i class="fa fa-circle-o"></i>Register</router-link>
-              </li>
-              <li>
-                <router-link to="/lockscreen"><i class="fa fa-circle-o"></i>Lock Screen</router-link>
-              </li>
-            </ul>
-          </li>
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-share"></i> <span>Multilevel</span>
-              <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> Level One T</a></li>
-              <li>
-                <a href="#"><i class="fa fa-circle-o"></i> Level One
-                  <span class="pull-right-container">
-                    <i class="fa fa-angle-left pull-right"></i>
-                  </span>
-                </a>
-                <ul class="treeview-menu">
-                  <li><a href="#"><i class="fa fa-circle-o"></i> Level Two T</a></li>
-                  <li>
-                    <a href="#"><i class="fa fa-circle-o"></i> Level Two
-                      <span class="pull-right-container">
-                         <i class="fa fa-angle-left pull-right"></i>
-                      </span>
-                    </a>
-                    <ul class="treeview-menu">
-                      <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                      <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li class="header">PAGES</li>
-          <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
-          <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-          <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
-          <li><a href="#"><i class="fa fa-circle-o text-green"></i> <span>Misc</span></a></li>
-          
+          <sidebar-menu name="Pages" menu-icon="fa-book">
+            <sidebar-menu-item name="404" link="404"></sidebar-menu-item>
+            <sidebar-menu-item name="500" link="500"></sidebar-menu-item>
+            <sidebar-menu-item name="Profile" link="profile"></sidebar-menu-item>
+            <sidebar-menu-item name="Invoice" link="invoice"></sidebar-menu-item>
+            <sidebar-menu-item name="Invoice Print" link="invoiceprint"></sidebar-menu-item>
+            <sidebar-menu-item name="Register" link="register"></sidebar-menu-item>
+            <sidebar-menu-item name="Lock Screen" link="lockscreen"></sidebar-menu-item>
+          </sidebar-menu>
+          <sidebar-menu name="Multilevel" menu-icon="fa-share">
+            <sidebar-menu-item name="Level One T" link=""></sidebar-menu-item>
+            <sidebar-menu-item name="Level One S" link="" is-multi-level=true>
+              <sidebar-menu-item name="Sub Level Two T" link=""></sidebar-menu-item>
+              <sidebar-menu-item name="Sub Level Two S" link="" is-multi-level=true>
+                <sidebar-menu-item name="Sub Level Three T" link=""></sidebar-menu-item>
+                <sidebar-menu-item name="Sub Level Three S" link="" is-multi-level=true>
+                  <sidebar-menu-item name="Sub Level Four T" link=""></sidebar-menu-item>
+                </sidebar-menu-item>
+              </sidebar-menu-item>
+            </sidebar-menu-item>
+          </sidebar-menu>
+          <sidebar-menu name="INFORMATION" is-splitter=true>
+          </sidebar-menu>
+          <sidebar-menu-item name="Important" link="" menu-icon="fa-circle-o text-red"> </sidebar-menu-item>
+          <sidebar-menu-item name="Warning" link="" menu-icon="fa-circle-o text-yellow"> </sidebar-menu-item>
+          <sidebar-menu-item name="Information" link="" menu-icon="fa-circle-o text-aqua"> </sidebar-menu-item>
+          <sidebar-menu-item name="MultMiscilevel" link="" menu-icon="fa-circle-o text-green"> </sidebar-menu-item>
         </ul>
         <!-- /.sidebar-menu -->
       </section>
@@ -328,99 +249,99 @@
     <!--<div class="control-sidebar-bg"></div>-->
   </div>
 </template>
+
 <script>
-import faker from 'faker'
-import asideTabs from './AsideTabs.vue'
-import sidebarMenu from './SideBarMenu.vue'
-import sidebarMenuItem from './SideBarMenuItem.vue'
-
-require('hideseek')
-
-module.exports = {
-  name: 'Main',
-  components: {
-    asideTabs,
-    sidebarMenu,
-    sidebarMenuItem
-  },
-  data: function () {
-    return {
-      section: 'Main',
-      me: '',
-      error: '',
-      api: {
-        servers: {
-          url: '', // Back end server
-          result: []
+  import faker from 'faker'
+  import asideTabs from './AsideTabs.vue'
+  import sidebarMenu from './SideBarMenu.vue'
+  import sidebarMenuItem from './SideBarMenuItem.vue'
+  
+  require('hideseek')
+  
+  module.exports = {
+    name: 'Main',
+    components: {
+      asideTabs,
+      sidebarMenu,
+      sidebarMenuItem
+    },
+    data: function() {
+      return {
+        section: 'Main',
+        me: '',
+        error: '',
+        api: {
+          servers: {
+            url: '', // Back end server
+            result: []
+          }
         }
       }
-    }
-  },
-  computed: {
-    store: function () {
-      return this.$parent.$store
     },
-    state: function () {
-      return this.store.state
-    },
-    callAPI: function () {
-      return this.$parent.callAPI
-    },
-    demo: function () {
-      return {
-        displayName: faker.name.findName(),
-        avatar: faker.image.avatar(),
-        email: faker.internet.email(),
-        randomCard: faker.helpers.createCard()
+    computed: {
+      store: function() {
+        return this.$parent.$store
+      },
+      state: function() {
+        return this.store.state
+      },
+      callAPI: function() {
+        return this.$parent.callAPI
+      },
+      demo: function() {
+        return {
+          displayName: faker.name.findName(),
+          avatar: faker.image.avatar(),
+          email: faker.internet.email(),
+          randomCard: faker.helpers.createCard()
+        }
+      },
+      year: function() {
+        var y = new Date()
+        return y.getFullYear()
       }
     },
-    year: function () {
-      var y = new Date()
-      return y.getFullYear()
-    }
-  },
-  methods: {
-    changeloading: function () {
-      this.store.commit('globalSearching')
-    },
-    toggleMenu: function (event) {
-      // remove active from li
-      window.$('li.pageLink').removeClass('active')
-
-      // Add it to the item that was clicked
-      event.toElement.parentElement.className = 'pageLink active'
-    },
-    topBarToggleMenu: function (event) {
-      // remove active from li
-      window.$('li.dropdown').removeClass('open')
-
-      if (window.$('li.dropdown').hasClass('open')){
+    methods: {
+      changeloading: function() {
+        this.store.commit('globalSearching')
+      },
+      toggleMenu: function(event) {
+        // remove active from li
+        window.$('li.pageLink').removeClass('active')
+  
+        // Add it to the item that was clicked
+        event.toElement.parentElement.className = 'pageLink active'
+      },
+      topBarToggleMenu: function(event) {
+        // remove active from li
         window.$('li.dropdown').removeClass('open')
-      }
-      else {
-        window.$('li.dropdown').addClass('open')
+  
+        if (window.$('li.dropdown').hasClass('open')) {
+          window.$('li.dropdown').removeClass('open')
+        } else {
+          window.$('li.dropdown').addClass('open')
+        }
+      },
+      asideTabs: function() {
+        if (window.$('control-sidebar').hasClass('control-sidebar-open')) {
+          window.$('control-sidebar').removeClass('control-sidebar-open')
+        } else {
+          window.$('control-sidebar').addClass('control-sidebar-open')
+        }
       }
     },
-    asideTabs: function (){
-      if (window.$('control-sidebar').hasClass('control-sidebar-open')){
-        window.$('control-sidebar').removeClass('control-sidebar-open')
-      }
-      else {
-        window.$('control-sidebar').addClass('control-sidebar-open')
-      }
+    mounted: function() {
+      // Page is ready. Let's load our functions!   
+      this.callAPI('GET', 'static/data/userInfo.json').then(
+        ok => {
+          this.$parent.$store.commit('setUserInfo', ok.body)
+        }, err => {
+          console.log('Error: ', err)
+        })
     }
-  },
-  mounted: function () {
-    // Page is ready. Let's load our functions!   
-    this.callAPI('GET', 'static/data/userInfo.json').then(
-      ok => {
-       this.$parent.$store.commit('setUserInfo', ok.body)
-    }, err => {
-       console.log('Error: ', err)
-    }) 
   }
-}
 </script>
+
 <style>
   .user-panel {
     height: 4em;
@@ -432,5 +353,4 @@ module.exports = {
     height: 1px;
     border-color: transparent;
   }
-
 </style>

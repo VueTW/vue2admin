@@ -28,13 +28,14 @@ module.exports = {
     props: {
         name: { required: true },
         link: { type: String, required: true },
-        isMultiLevel: { required: false, default: 'no' },
+        isMultiLevel: { required: false, default: false }, //default: 'no' },
         menuIcon: { required: false },
         labels: { required: false, default: () => [] } 
     },
     computed: {
       hasSubMenu: function(){
-        return this.isMultiLevel === 'yes';
+        //  console.log(' mlevel = ', this.isMultiLevel);
+        return this.isMultiLevel;
       }
     },
     methods: {
