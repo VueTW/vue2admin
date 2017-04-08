@@ -8,7 +8,7 @@
     </router-link>
     <a href="#" v-if="hasSubMenu">
       <li class="fa fa-circle-o"></li>
-      <span>{{name}}</span>
+      <span class="page">{{name}}</span>
       <span class="pull-right-container">
             <i class="fa fa-angle-left pull-right"></i>
       </span>

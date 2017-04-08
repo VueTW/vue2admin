@@ -183,8 +183,10 @@
             <sidebar-menu-item name="Simple Tables" link="tables"></sidebar-menu-item>
             <sidebar-menu-item name="Data Tables" link="datatables"></sidebar-menu-item>
           </sidebar-menu>
-          <!--<li class="pageLink" v-on:click="toggleMenu">
-            <router-link to="/calendar"><i class="fa fa-calendar"></i><span class="page">Calendar</span>
+          <!--
+          <li class="pageLink" v-on:click="toggleMenu">
+            <router-link to="/calendar"><i class="fa fa-calendar"></i>            
+            <span class="page">Calendar</span>
               <span class="pull-right-container">
             <small class="label pull-right bg-blue">17</small>&nbsp;&nbsp;
             <small class="label pull-right bg-red">3</small>
@@ -193,13 +195,17 @@
           <sidebar-menu-item name="Calendar" link="calendar" menu-icon="fa-calendar"
             :labels="[{'col':'bg-purple', 'txt':'11'}, {'col':'bg-yellow', 'txt':'6'}, {'col':'bg-blue', 'txt':'10'}]">
           </sidebar-menu-item>
-          <!--<li class="treeview">
-            <a href="#"><i class="fa fa-envelope"></i><span class="page">MailBox</span>
-            <span class="pull-right-container">
-            <small class="label pull-right bg-blue">17</small>&nbsp;&nbsp;
-            <small class="label pull-right bg-red">3</small>
-            <small class="label pull-right bg-yellow">23</small>
-            </span></a>
+          
+          <!--
+          <li class="treeview">
+            <a href="#"><i class="fa fa-envelope"></i>
+            <span class="page">MailBox</span>
+              <span class="pull-right-container">
+              <small class="label pull-right bg-blue">17</small>&nbsp;&nbsp;
+              <small class="label pull-right bg-red">3</small>
+              <small class="label pull-right bg-yellow">23</small>
+              </span>
+            </a>
             <ul class="treeview-menu">
               <li>
                 <router-link to="/inbox"><i class="fa fa-circle-o"></i>Inbox</router-link>
@@ -211,7 +217,8 @@
                 <router-link to="/readmail"><i class="fa fa-circle-o"></i>Read</router-link>
               </li>
             </ul>
-          </li>-->
+          </li>          
+          -->
            <sidebar-menu name="MailBox" menu-icon="fa-envelope"
             :labels="[{'col':'bg-blue', 'txt':'11'}, {'col':'bg-red', 'txt':'9'}, {'col':'bg-yellow', 'txt':'17'}]">
             <sidebar-menu-item name="Inbox" link="inbox"></sidebar-menu-item>
@@ -221,7 +228,7 @@
           <li class="treeview">
             <a href="#">
               <i class="fa fa-folder"></i>
-              <span>Pages</span>
+              <span class="page">Pages</span>
               <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -308,7 +315,6 @@
       </section>
       <router-view></router-view>
     </div>
-    <!--<hello></hello>-->
     <!-- /.content-wrapper -->
     <!-- Main Footer -->
     <footer class="main-footer">
@@ -406,7 +412,7 @@ module.exports = {
   },
   mounted: function () {
     // Page is ready. Let's load our functions!   
-    this.callAPI('GET', 'static/data/userinfo.json').then(
+    this.callAPI('GET', 'static/data/userInfo.json').then(
       ok => {
        this.$parent.$store.commit('setUserInfo', ok.body)
     }, err => {
